@@ -12,8 +12,8 @@
 
     <body>
         <main>
-            <div class="row justify-content-center">
-                <div class="card shadow-lg p-0 mt-5" style="width: 750px;">
+            <div class="d-flex justify-content-center">
+                <div class="card shadow-lg p-0 mt-5" style="width: 860px;">
                     <div class="card-header bg-success">
                         <h4 class="text-light text-center">Clasificador de Alimentos</h4>
                     </div>
@@ -42,7 +42,7 @@
                                 </div>
                             </div>
 
-                            <div class="row mx-1 mt-3">
+                            <div class="row mx-1 mt-4">
                                 <input type="submit" value="Clasificar y Añadir" class="col btn btn-success">
                             </div>
                         </form>
@@ -50,11 +50,11 @@
                         <div class="border mx-2 my-4"></div>
 
                         <div class="row mx-1 mt-3">
-                            <button class="btn btn-primary">Tabla de Resultados</button>
+                            <button class="btn btn-primary" action="/listaAlimentos">Tabla de Resultados</button>
                         </div>
 
-                        {% block resultados %}    
-                        {% endblock resultados %}
+                        {% block resultado %}
+                        {% endblock resultado %}
                     </div>
                 </div>
             </div>

@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="card-body">
-                    <table class="mx-2">
+                    <table class="mx-2 border">
                         <thead>
                             <th class="bg-dark text-light text-center px-3 py-2 fw-semibold">Alimento</th>
                             <th class="bg-dark text-light text-center px-3 py-2 fw-semibold">Cal Totales</th>
@@ -34,8 +34,8 @@
                             <thead>
                                 <th class="text-center px-3 py-2">{{ a.nombre }}</th>
                                 <th class="text-center px-3 py-2">{{ a.totalCal }} kcal</th>
-                                <th class="text-center px-3 py-2">{{ a.clasif }}%</th>
-                                <th class="text-center px-3 py-2">{{ a.predom }}</th>
+                                <th class="text-center px-3 py-2">{{ a.clasif }}</th>
+                                <th class="text-center px-3 py-2">{{ a.predom }}%</th>
                                 <th class="text-center px-3 py-2">{{ a.grasas }}</th>
                                 <th class="text-center px-3 py-2">{{ a.proteinas }}</th>
                                 <th class="text-center px-3 py-2">{{ a.carbs }}</th>
@@ -44,7 +44,7 @@
                         {% endif %}
                     </table>
 
-                    <div class="mx-2 mt-3">
+                    <div class="mx-2 mt-4">
                         <a href="/">
                             <button class="btn btn-success fw-semibold" style="width: 808px;">Volver</button>
                         </a>

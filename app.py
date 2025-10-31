@@ -29,7 +29,7 @@ def clasificar():
         for m in macros:
             if m > predom:
                 predom = m
-        predom = predom * 100 / totalCal
+        predom = round(predom * 100 / totalCal, 2)
         
         alimentos.append({
             "nombre": nombre,

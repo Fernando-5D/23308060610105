@@ -8,63 +8,63 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <head>
+</head>
 
-    <body>
-        <main>
-            <div class="d-flex justify-content-center">
-                <div class="card shadow-lg p-0 mt-5" style="width: 860px;">
-                    <div class="card-header bg-success">
-                        <h4 class="text-light text-center">Clasificador de Alimentos</h4>
-                    </div>
+<body>
+    <main>
+        <div class="d-flex justify-content-center">
+            <div class="card shadow-lg p-0 mt-5" style="width: 860px;">
+                <div class="card-header bg-success">
+                    <h4 class="text-light text-center">Clasificador de Alimentos</h4>
+                </div>
 
-                    <div class="card-body px-4 py-3">
-                        <form action="/clasificar-macro" method="post">
-                            <div>
-                                <p class="m-0 mb-1">Nombre del Alimento</p>
-                                <input type="text" class="form-control" name="nombre" required>
-                            </div>
-
-                            <div class="row mt-3">
-                                <div class="col">
-                                    <p class="m-0 mb-1">Grasas (g)</p>
-                                    <input type="number" class="form-control" name="grasas" required>
-                                </div>
-
-                                <div class="col">
-                                    <p class="m-0 mb-1">Proteínas (g)</p>
-                                    <input type="number" class="form-control" name="proteinas" required>
-                                </div>
-
-                                <div class="col">
-                                    <p class="m-0 mb-1">Carbohidratos (g)</p>
-                                    <input type="number" class="form-control" name="carbohidratos" required>
-                                </div>
-                            </div>
-
-                            <div class="row mx-1 mt-4">
-                                <input type="submit" value="Clasificar y Añadir" class="col btn btn-success">
-                            </div>
-                        </form>
-
-                        <div class="border mx-2 my-4"></div>
-
-                        <div class="row mx-1 mt-3">
-                            <a href="/listaAlimentos">
-                                <button class="btn btn-primary">Lista de Alimentos</button>
-                            </a>
+                <div class="card-body px-4 py-3">
+                    <form action="/clasificar-macro" method="post">
+                        <div>
+                            <p class="m-0 mb-1">Nombre del Alimento</p>
+                            <input type="text" class="form-control" name="nombre" required>
                         </div>
 
-                        {% block resultado %}
-                        {% endblock resultado %}
+                        <div class="row mt-3">
+                            <div class="col">
+                                <p class="m-0 mb-1">Grasas (g)</p>
+                                <input type="number" class="form-control" name="grasas" required>
+                            </div>
+
+                            <div class="col">
+                                <p class="m-0 mb-1">Proteínas (g)</p>
+                                <input type="number" class="form-control" name="proteinas" required>
+                            </div>
+
+                            <div class="col">
+                                <p class="m-0 mb-1">Carbohidratos (g)</p>
+                                <input type="number" class="form-control" name="carbohidratos" required>
+                            </div>
+                        </div>
+
+                        <div class="row mx-1 mt-4">
+                            <input type="submit" value="Clasificar y Añadir" class="col btn btn-success fw-semibold">
+                        </div>
+                    </form>
+
+                    <div class="border mx-2 my-4"></div>
+
+                    <div class="mx-1 mt-3">
+                        <a href="/listaAlimentos">
+                            <button class="btn btn-primary fw-semibold" style="width: 802px;">Lista de Alimentos</button>
+                        </a>
                     </div>
+
+                    {% block resultado %}
+                    {% endblock resultado %}
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"></script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
 
 </html>

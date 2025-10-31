@@ -44,7 +44,17 @@
                         {% endif %}
                     </table>
 
-                    <div class="mx-2 mt-4">
+                    {% if alimentos %}
+                    <div class="mx-2 mt-3">
+                        <a href="/eliminarRegistro">
+                            <button class="btn btn-danger fw-semibold" style="width: 808px;">Eliminar ultimo registro</button>
+                        </a>
+                    </div>
+                    
+                    <div class="border mx-2 mt-3"></div>
+                    {% endif %}
+
+                    <div class="mx-2 mt-3">
                         <a href="/">
                             <button class="btn btn-success fw-semibold" style="width: 808px;">Volver</button>
                         </a>

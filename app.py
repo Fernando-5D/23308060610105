@@ -47,5 +47,10 @@ def clasificar():
 def lista():
     return render_template("lista.html", alimentos=alimentos)
 
+@app.route("/eliminarRegistro")
+def eliminar():
+    alimentos.pop(-1)
+    return render_template("lista.html", alimentos=alimentos)
+
 if __name__ == "__main__":
     app.run(debug=True)

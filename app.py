@@ -25,8 +25,8 @@ def clasificar():
             clasif = "Carbohidratos"
         
         predom = 0
-        tmp = [grasas, proteinas, carbs]
-        for m in tmp:
+        macros = [grasas, proteinas, carbs]
+        for m in macros:
             if m > predom:
                 predom = m
         predom = predom * 100 / totalCal

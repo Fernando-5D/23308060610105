@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
-alimentos = {}
+alimentos = []
 
 @app.route("/")
 def form():
@@ -11,10 +11,10 @@ def form():
 def clasificar():
     if request.method == "POST":
         nombre = request.form.get("nombre")
-        grasas = float(request.form.get("grasas")) * 9
-        proteinas = float(request.form.get("proteinas")) * 4
-        carbs = float(request.form.get("carbohidratos")) * 4
-        totalCal = grasas + proteinas + carbs
+        grasas = float(request.form.get("grasas"))
+        proteinas = float(request.form.get("proteinas"))
+        carbs = float(request.form.get("carbohidratos"))
+        totalCal = (grasas * 9) + (proteinas * 4) + (carbs * 4)
         
         clasif = ""
         if grasas > proteinas:
@@ -31,7 +31,17 @@ def clasificar():
                 predom = m
         predom = predom * 100 / totalCal
         
-        return render_template("resultado.html")
+        alimentos.append({
+            "nombre": nombre,
+            "totalCal": totalCal,
+            "clasif": clasif,
+            "predom": predom,
+            "grasas": grasas,
+            "proteinas": proteinas,
+            "carbs": carbs
+        })
+        
+        return render_template("resultado.html", nombre=nombre, totalCal=totalCal, clasif=clasif, predom=predom, grasas=grasas, proteinas=proteinas, carbs=carbs)
         
 @app.route("/listaAlimentos")
 def lista():

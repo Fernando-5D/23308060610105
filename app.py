@@ -45,7 +45,7 @@ def clasificar():
         
 @app.route("/listaAlimentos")
 def lista():
-    return render_template("lista.html")
+    return render_template("lista.html", alimentos=alimentos)
 
 if __name__ == "__main__":
     app.run(debug=True)

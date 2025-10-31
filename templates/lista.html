@@ -29,17 +29,19 @@
                         <th class="bg-dark text-light text-center px-3 py-2 fw-semibold">Carbs (g)</th>
                     </thead>
 
-                    {% for a in {{ alimentos }} %}
-                    <thead>
-                        <th class="text-center px-3 py-2">{{ nombre }}</th>
-                        <th class="text-center px-3 py-2">{{ totalCal }} kcal</th>
-                        <th class="text-center px-3 py-2">{{ clasif }}%</th>
-                        <th class="text-center px-3 py-2">{{ predom }}</th>
-                        <th class="text-center px-3 py-2">{{ grasas }}</th>
-                        <th class="text-center px-3 py-2">{{ proteinas }}</th>
-                        <th class="text-center px-3 py-2">{{ carbs }}</th>
-                    </thead>
-                    {% endfor %}
+                    {% if alimentos %}
+                        {% for a in alimentos %}
+                            <thead>
+                                <th class="text-center px-3 py-2">{{ a.nombre }}</th>
+                                <th class="text-center px-3 py-2">{{ a.totalCal }} kcal</th>
+                                <th class="text-center px-3 py-2">{{ a.clasif }}%</th>
+                                <th class="text-center px-3 py-2">{{ a.predom }}</th>
+                                <th class="text-center px-3 py-2">{{ a.grasas }}</th>
+                                <th class="text-center px-3 py-2">{{ a.proteinas }}</th>
+                                <th class="text-center px-3 py-2">{{ a.carbs }}</th>
+                            </thead>
+                        {% endfor %}
+                    {% endif %}
                 </table>
             </div>
         </div>
